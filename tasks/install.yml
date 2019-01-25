@@ -3,9 +3,11 @@
 
 - name: Install APF (Advanced Policy Firewall)
   apt: 
-    name: {{item}}
+    name: "{{ packages }}"
     state: present
-  with_items:
-  - apf-firewall
-  become: true
+  vars:
+    packages:
+    - apf-firewall
+  register: my_result
+  until: my_result is succeeded
   tags: apf-firewall
