@@ -1,4 +1,4 @@
-apf-firewall
+apf_firewall
 =========
 
 An Ansible role that installs and configures APF (Advanced Policy Firewall)
@@ -25,7 +25,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: lukasgibb.apf-firewall, apf-firewall_IG_TCP_CPORTS: "22,80,443" }
+         - { role: lukasgibb.apf_firewall, apf_firewall_IG_TCP_CPORTS: "22,80,443" }
 
 License
 -------

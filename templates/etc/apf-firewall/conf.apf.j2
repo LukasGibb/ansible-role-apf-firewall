@@ -368,10 +368,10 @@ HELPER_FTP_DATA="20"
 # IG_ICMP_TYPES="3,5,11,0,30,8"
 
 # Common inbound (ingress) TCP ports
-IG_TCP_CPORTS="{{ apf-firewall_IG_TCP_CPORTS }}"
+IG_TCP_CPORTS="{{ apf_firewall_IG_TCP_CPORTS }}"
 
 # Common inbound (ingress) UDP ports
-IG_UDP_CPORTS="{{ apf-firewall_IG_UDP_CPORTS }}"
+IG_UDP_CPORTS="{{ apf_firewall_IG_UDP_CPORTS }}"
 
 # Common ICMP inbound (ingress) types
 # 'internals/icmp.types' for type definition; 'all' is wildcard for any
@@ -392,13 +392,13 @@ IG_ICMP_TYPES="3,5,11,0,30,8"
 # EG_ICMP_TYPES="all"
 
 # Outbound (egress) filtering 
-EGF="{{ apf-firewall_EGF }}"
+EGF="{{ apf_firewall_EGF }}"
 
 # Common outbound (egress) TCP ports
-EG_TCP_CPORTS="{{ apf-firewall_EG_TCP_CPORTS }}"
+EG_TCP_CPORTS="{{ apf_firewall_EG_TCP_CPORTS }}"
 
 # Common outbound (egress) UDP ports
-EG_UDP_CPORTS="{{ apf-firewall_EG_UDP_CPORTS }}"
+EG_UDP_CPORTS="{{ apf_firewall_EG_UDP_CPORTS }}"
 
 # Common ICMP outbound (egress) types
 # 'internals/icmp.types' for type definition; 'all' is wildcard for any

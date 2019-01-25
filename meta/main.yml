@@ -1,5 +1,5 @@
 galaxy_info:
-  role_name: apf-firewall
+  role_name: apf_firewall
   author: LukasGibb
   description: An Ansible role that installs and configures APF (Advanced Policy Firewall)
   company: cloudjourneyman.com
@@ -16,6 +16,7 @@ galaxy_info:
   galaxy_tags:     
     - apf
     - apf-firewall
+    - apf_firewall
     - firewall
     - security
 
