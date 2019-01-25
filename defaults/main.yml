@@ -1,8 +1,8 @@
 ---
 # defaults file for ansible-role-apf-firewall
 
-# Sets the RUN parameter to 'yes' or 'no' in /etc/defaults/apf-firewall
-apf_firewall_enabled: yes
+# Sets the RUN parameter to "yes" or "no" in /etc/defaults/apf-firewall
+apf_firewall_enabled: "yes"
 
 # Ingress (inbound) TCP Ports to open
 apf_firewall_IG_TCP_CPORTS: "22"
