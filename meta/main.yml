@@ -15,9 +15,11 @@ galaxy_info:
 
   galaxy_tags:     
     - apf
-    - apf-firewall
-    - apf_firewall
+    - rfx
+    - advanced
+    - policy
     - firewall
+    - network
     - security
 
 dependencies: []

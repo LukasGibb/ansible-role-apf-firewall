@@ -2,8 +2,8 @@
 
 - name: Copy firewall config files
   template:
-    src: etc/apf-firewall/{{item}}.j2
-    dest: /etc/apf-firewall/{{item}}
+    src: etc/apf-firewall/{{ item }}.j2
+    dest: /etc/apf-firewall/{{ item }}
     owner: root
     group: root
     mode: 0755
