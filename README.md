@@ -3,6 +3,8 @@ apf_firewall
 
 An Ansible role that installs and configures APF (Advanced Policy Firewall)
 
+For more information about APF can be found [here](https://www.rfxn.com/projects/advanced-policy-firewall/)
+
 Requirements
 ------------
 
@@ -36,4 +38,4 @@ Author Information
 ------------------
 
 This role was created in 2019 by:
-[Lukas Gibb](https://github.com/LukasGibb) [CloudJourneyman.com](http://www.cloudjourneyman.com/)
+[Lukas Gibb](https://github.com/LukasGibb) - [CloudJourneyman.com](http://www.cloudjourneyman.com/)
