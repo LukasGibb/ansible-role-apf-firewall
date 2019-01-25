@@ -1,0 +1,24 @@
+--- functions.apf	2011-07-28 05:22:52.000000000 +1000
++++ functions.apf.new	2017-09-22 17:15:00.740000000 +1000
+@@ -67,20 +67,8 @@
+ VALMOD=$2
+ if [ "$KREL" == "2.4" ]; then
+ 	MEXT="o"
+-elif [ "$KREL" == "2.6" ]; then
+-	MEXT="ko"
+-elif [ ! "$KREL" == "2.4" ] && [ ! "$KREL" == "2.6" ]; then
+-	if [ ! "$SET_VERBOSE" == "1" ]; then
+-        	echo "Kernel version not equal to 2.4.x or 2.6.x, aborting."
+-	fi
+-        eout "{glob} kernel version not equal to 2.4.x or 2.6.x, aborting."
+-        exit 1
+ else
+-        if [ ! "$SET_VERBOSE" == "1" ]; then
+-	        echo "Kernel version not equal to 2.4.x or 2.6.x, aborting."
+-	fi
+-        eout "{glob} kernel version not equal to 2.4.x or 2.6.x, aborting."
+-        exit 1
++	MEXT="ko"
+ fi
+ 
+ if [ "$VALMOD" == "1" ] && [ ! -f "/lib/modules/$(uname -r)/kernel/net/ipv4/netfilter/$1.$MEXT" ]; then

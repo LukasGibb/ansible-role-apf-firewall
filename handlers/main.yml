@@ -1,0 +1,19 @@
+---
+# handlers file for ansible-role-apf-firewall
+
+- name: apf-firewall restart
+  service: 
+    name: apf-firewall
+    state: restarted
+  become: true
+  tags: apf-firewall
+
+- name: apf-firewall apply patch
+  patch:
+    backup: yes
+    remote_src: yes
+    src: /etc/apf-firewall/internals/functions.apf.patch
+    dest: /etc/apf-firewall/internals/functions.apf
+  notify: apf-firewall restart
+  become: true
+  tags: apf-firewall

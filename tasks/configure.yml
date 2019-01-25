@@ -1,0 +1,25 @@
+---
+
+- name: Copy firewall config files
+  template:
+    src: etc/apf-firewall/{{item}}.j2
+    dest: /etc/apf-firewall/{{item}}
+    owner: root
+    group: root
+    mode: 0755
+  notify: apf-firewall restart
+  with_items:
+  - conf.apf
+  become: true
+  tags: apf-firewall
+
+- name: Copy firewall service default file
+  template: 
+    src: etc/default/apf-firewall.j2
+    dest: /etc/default/apf-firewall
+    owner: root
+    group: root
+    mode: 0644
+  notify: apf-firewall restart
+  become: true
+  tags: apf-firewall

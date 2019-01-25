@@ -1,0 +1,8 @@
+---
+
+- name: Check the firewall service is running
+  service: 
+    name: apf-firewall
+    state: started
+    enabled: yes
+  tags: apf-firewall

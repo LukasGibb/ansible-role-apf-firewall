@@ -1,0 +1,24 @@
+---
+# install tasks file for ansible-role-apf-firewall
+
+- name: Install APF (Advanced Pro Firewall)
+  apt: 
+    name: {{item}}
+    state: present
+  with_items:
+  - apf-firewall
+  become: true
+  tags: apf-firewall
+
+- name: Copy APF patch file
+  template:
+    src: etc/apf-firewall/internals/{{item}}.j2
+    dest: /etc/apf-firewall/internals/{{item}}
+    owner: root
+    group: root
+    mode: 0755
+  notify: apf-firewall apply patch
+  with_items:
+  - functions.apf.patch
+  become: true
+  tags: apf-firewall
