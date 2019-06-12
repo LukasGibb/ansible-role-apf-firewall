@@ -29,12 +29,12 @@ INSTALL_PATH="/etc/apf-firewall"
 # Untrusted Network interface(s); all traffic on defined interface will be
 # subject to all firewall rules. This should be your internet exposed
 # interfaces. Only one interface is accepted for each value.
-IFACE_IN="eth0" 
-IFACE_OUT="eth0"
+IFACE_IN="{{ apf_firewall_IFACE_IN }}" 
+IFACE_OUT="{{ apf_firewall_IFACE_OUT }}"
 
 # Trusted Network interface(s); all traffic on defined interface(s) will by-pass
 # ALL firewall rules, format is white space or comma separated list.
-IFACE_TRUSTED=""
+IFACE_TRUSTED="{{ apf_firewall_IFACE_TRUSTED }}"
 
 # This option will allow for all status events to be displayed in real time on
 # the console as you use the firewall. Typically, APF used to operate silent
