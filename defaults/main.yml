@@ -25,3 +25,12 @@ apf_firewall_EG_TCP_CPORTS: "21,25,80,443,43"
 
 # Egress (outbound) UDP Ports to open
 apf_firewall_EG_UDP_CPORTS: "20,21,53"
+
+# Block of text (iptables rules and/or comments) to insert into the main.rules file
+apf_firewall_main_rules: ""
+
+# eg.
+# apf_firewall_main_rules: |
+#   # Some custom firewall rules
+#   # iptables -A INPUT -p tcp --dport 22 --source 192.168.0.1/32 -j ACCEPT         # Allow SSH from the router
+#   # iptables -A INPUT -p tcp --dport 443 --source 192.168.0.0/24 -j ACCEPT        # Allow HTTPS from LAN

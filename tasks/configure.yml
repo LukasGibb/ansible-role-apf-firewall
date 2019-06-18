@@ -23,3 +23,13 @@
   notify: apf-firewall restart
   become: true
   tags: apf-firewall
+
+- name: Add rules to main.rules
+  blockinfile:
+    path: /etc/apf-firewall/main.rules
+    block: "{{ apf_firewall_main_rules }}"
+    marker: "# {mark} ANSIBLE MANAGED BLOCK"
+    backup: yes
+  become: true
+  notify: apf-firewall restart
+  tags: apf-firewall
