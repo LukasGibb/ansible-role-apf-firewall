@@ -4,5 +4,6 @@
     - role_under_test
   vars: 
   - apf_firewall_main_rules: |
+      # Some custom firewall rules
       iptables -A INPUT -p tcp --dport 22 --source 192.168.0.1/32 -j ACCEPT         # Allow SSH from the router
       iptables -A INPUT -p tcp --dport 443 --source 192.168.0.0/24 -j ACCEPT        # Allow HTTPS from LAN
